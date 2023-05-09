@@ -1,10 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TopDownCharacterController : MonoBehaviour
 {
+
+
+    [SerializeField]
+    private GameObject bulletPrefab;
+
+    [SerializeField]
+    private float bulletSpeed;
+
+    
+
+    private bool autoFire;
+
     //Reference to attached animator
     private Animator animator;
 
@@ -42,18 +55,31 @@ public class TopDownCharacterController : MonoBehaviour
         //Set the velocity to the direction they're moving in, multiplied
         //by the speed they're moving
         rb.velocity = playerDirection * (playerSpeed * playerMaxSpeed) * Time.fixedDeltaTime;
+
+        
     }
 
     public void OnPlayerInputShoot(InputAction.CallbackContext context)
     {
         //Not performed? Don't run any other code
-        if (!context.performed)
-            return;
+        if (context.performed)
+        {
+            FireBullet();
+        }
+            
 
         //Otherwise:
         Debug.Log($"Shoot! {Time.time}", gameObject);
     }
+    private void FireBullet()
+    {
 
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+        rb.AddForce(playerDirection * bulletSpeed);
+        Destroy(bullet, 5f);
+    }
     /// <summary>
     /// Called when the player wants to move in a certain direction
     /// </summary>
@@ -91,4 +117,6 @@ public class TopDownCharacterController : MonoBehaviour
         //And set the speed to 1, so they move!
         playerSpeed = 1f;
     }
+
+    
 }
