@@ -149,3 +149,4 @@ MonoBehaviour:
   player: {fileID: 7886162734694023909, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
   distance: 5
   enemySpeed: 2
+  target: {fileID: 7886162734694023928, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}

@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour
     private Vector2 currentPos;
     public float distance;
     public float enemySpeed;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+
         if(Vector2.Distance(transform.position, playerPos.position) < distance)
         {
             transform.position = Vector2.MoveTowards(transform.position, playerPos.position, enemySpeed * Time.deltaTime);
@@ -30,7 +33,18 @@ public class EnemyMove : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, currentPos, enemySpeed * Time.deltaTime);
         }
+
+        
+
     }
 
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == ("Player"))
+        {
+            Debug.Log("PlayerHit!");
+            //Destroy(collision.gameObject);
+        }
+    }
+
 }
