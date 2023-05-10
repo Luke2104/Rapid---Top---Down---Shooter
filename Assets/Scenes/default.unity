@@ -38725,6 +38725,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1280881461804665159, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3997589835622403623, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -38768,6 +38772,10 @@ PrefabInstance:
     - target: {fileID: 3997589835622403623, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7227435865287419256, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
+      propertyPath: m_Mass
+      value: 900000
       objectReference: {fileID: 0}
     - target: {fileID: 7227435865287419256, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
       propertyPath: m_GravityScale
