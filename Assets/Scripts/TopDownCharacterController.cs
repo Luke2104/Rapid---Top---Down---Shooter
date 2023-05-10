@@ -68,8 +68,7 @@ public class TopDownCharacterController : MonoBehaviour
         }
             
 
-        //Otherwise:
-        Debug.Log($"Shoot! {Time.time}", gameObject);
+       
     }
     private void FireBullet()
     {
@@ -118,5 +117,12 @@ public class TopDownCharacterController : MonoBehaviour
         playerSpeed = 1f;
     }
 
-    
+    void OnTrigger2DEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("PlayerHit");
+        }
+    }
+
 }

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.CompareTag("Enemy"))
+        {
+            Debug.Log("Hit");
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
