@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private float hits;
+    public int damage = 5;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
-        { 
-            Destroy(gameObject);
-            hits += 1;
-
-            if (hits >= 5)
-            {
-                Debug.Log(hits);
-                Destroy(collision.gameObject);
-                hits = 0;
-            }
-
+        {
+            collision.gameObject.GetComponent <EnemyHealth>().TakeDamage(damage);
         }
        
     }

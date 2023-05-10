@@ -14,8 +14,9 @@ public class TopDownCharacterController : MonoBehaviour
     [SerializeField]
     private float bulletSpeed;
 
-    
-
+    public int maxAmmo;
+    public int mags;
+    public int ammo;
     private bool autoFire;
 
     //Reference to attached animator
@@ -64,20 +65,42 @@ public class TopDownCharacterController : MonoBehaviour
         //Not performed? Don't run any other code
         if (context.performed)
         {
-            FireBullet();
+            if (ammo > 0)
+            {
+                FireBullet();
+            }
         }
-            
-
-       
+        
     }
+
     private void FireBullet()
     {
-
+        ammo = ammo - 1;
+        Debug.Log(ammo);
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         rb.AddForce(playerDirection * bulletSpeed);
         Destroy(bullet, 5f);
+
+        
+    }
+
+    public void OnPlayerInputReload(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (mags > 0 && ammo < 50)
+            {
+                Debug.Log("Reloading!");
+                ammo = maxAmmo;
+                Debug.Log(ammo);
+                mags = mags - 1;
+                Debug.Log(mags);
+            }
+            
+            
+        }
     }
     /// <summary>
     /// Called when the player wants to move in a certain direction
