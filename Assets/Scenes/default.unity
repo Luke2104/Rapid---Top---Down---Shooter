@@ -129,6 +129,7 @@ NavMeshSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &94993403
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +294,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of dbecaea... Broke
 --- !u!1 &269016865
 GameObject:
   m_ObjectHideFlags: 0
@@ -6542,7 +6545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.002, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39067,7 +39070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> parent of 84efbeb... AmmoUI Done, EnemySpawnerStart
@@ -39176,7 +39179,7 @@ RectTransform:
   m_Children:
   - {fileID: 1130215667}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -39281,6 +39284,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7886162734694023928, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
   m_PrefabInstance: {fileID: 7886162732988094314}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1861326231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7886162734694023929, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
+  m_PrefabInstance: {fileID: 7886162732988094314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861326223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a4cff1c0df7fc4b9c119c42273b2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2140162404
 GameObject:
   m_ObjectHideFlags: 0
@@ -39327,7 +39341,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140162408
 MonoBehaviour:
@@ -39387,7 +39401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997589835622403623, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3997589835622403623, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39551,7 +39565,7 @@ PrefabInstance:
     - target: {fileID: 7886162734694023934, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1861326231}
     - target: {fileID: 7886162734694023934, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
