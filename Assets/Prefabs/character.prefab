@@ -98,6 +98,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 077a3f1b-38cf-4c98-81cb-6a3d19775a70
     m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1ce66aae-ffe4-4095-84ec-3fb3f59e1ded
+    m_ActionName: Player/Reload[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -117,6 +121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 450053099105197870, guid: 33296dedb00ff7543a405ad02f46d6b6, type: 3}
   bulletSpeed: 350
+  ammoText: {fileID: 0}
+  magText: {fileID: 0}
+  maxAmmo: 0
+  mags: 0
+  ammo: 0
   playerMaxSpeed: 200
 --- !u!50 &7886162734694023935
 Rigidbody2D:

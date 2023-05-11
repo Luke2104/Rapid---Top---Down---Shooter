@@ -10,7 +10,7 @@ public class EnemyMove : MonoBehaviour
     private Vector2 currentPos;
     public float distance;
     public float enemySpeed;
-    public float health;
+   
     // Start is called before the first frame update
     void Start()
     {

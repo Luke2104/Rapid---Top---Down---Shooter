@@ -5,12 +5,15 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public int damage = 5;
+    public GameObject enemy;
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent <EnemyHealth>().TakeDamage(damage);
+            Debug.Log("Hit");
+            enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
         }
-       
     }
 }

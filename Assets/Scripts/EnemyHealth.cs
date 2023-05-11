@@ -5,9 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     
-    public int currentHealth = 20;
+    public int currentHealth ;
     public static bool isEnemyDead = false;
 
+    private void Start()
+    {
+        currentHealth = 20;
+    }
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
@@ -16,7 +20,12 @@ public class EnemyHealth : MonoBehaviour
         {
             Debug.Log("Dead: " + currentHealth);
             isEnemyDead = true;
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject, 1f);
     }
 }

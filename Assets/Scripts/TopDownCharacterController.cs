@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using TMPro;
+
 public class TopDownCharacterController : MonoBehaviour
 {
 
@@ -14,6 +16,8 @@ public class TopDownCharacterController : MonoBehaviour
     [SerializeField]
     private float bulletSpeed;
 
+    public TMP_Text ammoText;
+    public TMP_Text magText;
     public int maxAmmo;
     public int mags;
     public int ammo;
@@ -86,6 +90,11 @@ public class TopDownCharacterController : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        ammoText.SetText(ammo.ToString());
+        magText.SetText(mags.ToString());
+    }
     public void OnPlayerInputReload(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -142,10 +151,7 @@ public class TopDownCharacterController : MonoBehaviour
 
     void OnTrigger2DEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Debug.Log("PlayerHit");
-        }
+       
     }
 
 }

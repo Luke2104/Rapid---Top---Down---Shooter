@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  enemy: {fileID: 7900404698726135926, guid: e132fa2b628832649bb13ccd1ef2d85f, type: 3}
 --- !u!58 &32809843978175314
 CircleCollider2D:
   m_ObjectHideFlags: 0
