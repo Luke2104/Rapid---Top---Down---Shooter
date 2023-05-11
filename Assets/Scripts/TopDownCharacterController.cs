@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class TopDownCharacterController : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class TopDownCharacterController : MonoBehaviour
     [SerializeField]
     private float bulletSpeed;
 
+    public TMP_Text ammoText;
+    public TMP_Text magText;
     public int maxAmmo;
     public int mags;
     public int ammo;
@@ -71,6 +75,12 @@ public class TopDownCharacterController : MonoBehaviour
             }
         }
         
+    }
+
+    public void Update()
+    {
+        ammoText.SetText(ammo.ToString());
+        magText.SetText(mags.ToString());   
     }
 
     private void FireBullet()
