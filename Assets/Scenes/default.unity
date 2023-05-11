@@ -130,6 +130,7 @@ NavMeshSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &94993403
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +432,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269016865}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 84efbeb... AmmoUI Done, EnemySpawnerStart
 =======
 >>>>>>> parent of 84efbeb... AmmoUI Done, EnemySpawnerStart
 =======
@@ -39027,6 +39030,7 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1180548365
 GameObject:
   m_ObjectHideFlags: 0
@@ -39072,6 +39076,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 84efbeb... AmmoUI Done, EnemySpawnerStart
 =======
 >>>>>>> parent of 84efbeb... AmmoUI Done, EnemySpawnerStart
 =======
