@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public int damage = 5;
-    public GameObject enemy;
+    
     
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +13,7 @@ public class BulletScript : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Hit");
-            enemy.GetComponent<EnemyHealth>().TakeDamage(damage);
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
         }
     }
 }

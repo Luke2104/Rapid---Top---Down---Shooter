@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1129484278259008572}
   - component: {fileID: 7227435865287419256}
   - component: {fileID: 1280881461804665159}
-  - component: {fileID: -8652233414469641187}
   - component: {fileID: 8641533146755886402}
+  - component: {fileID: -8838027641118102452}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -135,7 +135,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8157597, y: 4.0868473}
   m_EdgeRadius: 0
---- !u!114 &-8652233414469641187
+--- !u!114 &8641533146755886402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900404698726135926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92997cea85f43f4b9c3002d18e459d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreCount: {fileID: 5058727031353856637, guid: 83e1633d4133b464289b3f15760cf0bc, type: 3}
+  currentHealth: -65
+--- !u!114 &-8838027641118102452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,16 +164,3 @@ MonoBehaviour:
   player: {fileID: 7886162734694023909, guid: 6459fc3de2c17af429b1c7272ee62085, type: 3}
   distance: 5
   enemySpeed: 2
---- !u!114 &8641533146755886402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7900404698726135926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b92997cea85f43f4b9c3002d18e459d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 20
